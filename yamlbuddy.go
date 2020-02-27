@@ -55,7 +55,7 @@ func main() {
 		return
 	}
 
-	parsed := make(map[interface{}]interface{})
+	var parsed interface{}
 	err = yaml.Unmarshal(inBody, &parsed)
 	if err != nil {
 		log.Fatalf("Error parsing: %s", err)
